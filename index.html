@@ -137,7 +137,8 @@
                         </div>
                     </div>
                      <!-- Download Resume Button (The 'href' is updated to link the uploaded PDF file) -->
-                    <a href="SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                    <!-- FIX: Ensure the file path uses the correct name, which is SQAE-Automation.pdf -->
+                    <a href="./SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
                         <!-- Download Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download PDF Resume
@@ -320,10 +321,7 @@
                 </p>
                 
                 <!-- 
-                    *** CHANGES HERE: FORM SUBMISSION NOW USES FORMSPREE ***
-                    1. 'action' is set to a generic Formspree endpoint (https://formspree.io/f/mrgwjvry). 
-                    2. 'method' is set to POST.
-                    3. A hidden input field is added with your email (usmansaghri@gmail.com) so Formspree knows where to send the email.
+                    FORM SUBMISSION NOW USES FORMSPREE 
                 -->
                 <form id="contact-form" action="https://formspree.io/f/mrgwjvry" method="POST" class="space-y-4 text-left">
                     <!-- This hidden field tells Formspree where to send the email (Using your displayed email) -->
@@ -358,9 +356,6 @@
 
     <!-- JavaScript for Navigation Toggle -->
     <script>
-        // *** OLD FORM SUBMISSION LOGIC REMOVED ***
-        // Formspree ab form submission ko handle karega.
-        
         // Navigation Toggle Logic (Existing)
         const menuButton = document.getElementById('menu-button');
         const navMenu = document.getElementById('navigation-menu');
