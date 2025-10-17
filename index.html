@@ -163,15 +163,15 @@
                         </div>
                     </div>
                      
-                    <!-- Action Buttons Container (Download only) -->
+                    <!-- Action Buttons Container (PDF Open Fixed) -->
                     <div class="mt-4 flex flex-col sm:flex-row justify-center md:justify-end">
                         
-                        <!-- Download Button: Using JS function to force download behavior -->
-                        <button onclick="forceDownload()" class="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-                            <!-- Download Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            Download PDF Resume
-                        </button>
+                        <!-- Link to Open PDF Directly (removed 'download' attribute) -->
+                        <a href="./SQAE-Automation.pdf" target="_blank" class="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                            <!-- File Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Open PDF Resume
+                        </a>
                     </div>
                 </div>
             </div>
@@ -285,7 +285,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Handling & Download Fix -->
+    <!-- JavaScript for Mobile Menu Handling -->
     <script>
         // --- Mobile Menu Toggle ---
         document.getElementById('menu-button').addEventListener('click', function() {
@@ -315,25 +315,6 @@
                 }
             });
         });
-
-        // --- PDF Download Fix (Force Download) ---
-        function forceDownload() {
-            // Path to the file (assuming it's in the same directory/asset space)
-            const url = './SQAE-Automation.pdf'; 
-            // The desired filename for the downloaded file
-            const filename = 'Usman_Saghri_SQA_Resume.pdf'; 
-            
-            // 1. Create a temporary anchor element
-            const tempLink = document.createElement('a');
-            tempLink.style.display = 'none';
-            tempLink.href = url;
-            tempLink.download = filename; // This attribute forces the download behavior
-            
-            // 2. Append to body, simulate click, and remove it
-            document.body.appendChild(tempLink);
-            tempLink.click();
-            document.body.removeChild(tempLink);
-        }
     </script>
 </body>
 </html>
