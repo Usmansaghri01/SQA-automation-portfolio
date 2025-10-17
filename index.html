@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Reverted: Usman Saghri | SQA Automation Portfolio -->
     <title>Usman Saghri | SQA Automation Portfolio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +29,9 @@
             margin-right: 1.5rem;
             color: #94a3b8; /* Slate-400 */
         }
+        .icon-text a:hover {
+            color: #fff; /* White on hover for links */
+        }
         .icon-text svg {
             margin-right: 0.5rem;
             color: #818cf8; /* Indigo-400 */
@@ -44,7 +48,6 @@
         }
         
         /* Custom CSS for the Scrollable Slider Effect in Skills Section */
-        /* Note: Cards in this section must maintain a fixed width for the slider to work */
         .scroll-container {
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
@@ -83,11 +86,11 @@
 </head>
 <body>
 
-    <!-- Header & Navigation (UPDATED FOR MOBILE RESPONSIVENESS) -->
+    <!-- Header & Navigation (Call Now button added here) -->
     <header class="bg-slate-900 border-b border-indigo-500/30 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo/Brand -->
+                <!-- Logo/Brand (Reverted: Usman Saghri | SQA) -->
                 <a href="#" class="text-xl sm:text-2xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition duration-300">USMAN SAGHRI | SQA</a>
                 
                 <!-- Hamburger Button (Mobile Only) -->
@@ -99,12 +102,27 @@
                 </button>
 
                 <!-- Navigation Links (Collapsible on Mobile, Visible on MD+) -->
-                <div id="navigation-menu" class="hidden md:flex md:space-x-4 space-x-0 md:space-y-0 space-y-3 flex-col md:flex-row text-sm sm:text-base absolute md:relative top-full left-0 w-full md:w-auto bg-slate-900 md:bg-transparent p-4 md:p-0 shadow-xl md:shadow-none border-t border-indigo-500/30 md:border-t-0">
-                    <a href="#about" class="text-slate-300 hover:text-white transition duration-200 block md:inline">About</a>
-                    <a href="#skills" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Skills & Tools</a>
-                    <a href="#certifications" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Certifications</a>
-                    <a href="#projects" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Portfolio</a>
-                    <a href="#contact" class="md:px-3 md:py-1 py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition duration-300 block text-center">Contact</a>
+                <div class="hidden md:flex md:items-center space-x-6">
+                    <nav id="navigation-menu" class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 text-sm sm:text-base absolute md:relative top-full left-0 w-full md:w-auto bg-slate-900 md:bg-transparent p-4 md:p-0 shadow-xl md:shadow-none border-t border-indigo-500/30 md:border-t-0">
+                        <!-- Navigation Links -->
+                        <a href="#hero" class="text-slate-300 hover:text-white transition duration-200 block md:inline">About</a>
+                        <a href="#skills" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Skills & Tools</a>
+                        <a href="#certifications" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Certifications</a>
+                        
+                        <!-- Call Now Button for Mobile (Kept: Telto link) -->
+                        <a href="tel:03362067001" class="md:hidden inline-flex items-center justify-center px-6 py-2 bg-green-600 text-white text-base font-semibold rounded-lg hover:bg-green-700 transition duration-300 mt-3">
+                            <!-- Phone Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call Now
+                        </a>
+                    </nav>
+                    
+                    <!-- Call Now Button for Desktop (Kept: Telto link) -->
+                    <a href="tel:03362067001" class="hidden md:inline-flex items-center px-4 py-1.5 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition duration-300">
+                        <!-- Phone Icon (smaller for header) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call Now
+                    </a>
                 </div>
             </div>
         </div>
@@ -114,10 +132,10 @@
     <section id="hero" class="relative section-padding pt-24 pb-12 md:pt-40 md:pb-20 bg-slate-900 border-b border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
-                <!-- Left: Title and Summary -->
+                <!-- Left: Title and Summary (Reverted: Usman Saghri | SQA Engineer) -->
                 <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
                     <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">Usman Saghri</h1>
-                    <h2 class="2xl sm:text-3xl font-semibold mb-4 text-indigo-400">SQA Engineer</h2>
+                    <h2 class="2xl sm:text-3xl font-semibold mb-4 text-indigo-400">SQA Automation Engineer</h2>
                     <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0">
                         Solution Oriented SQA Engineer with 3 years of experience, skilled in motivating teams, and passionate about software quality assurance and robust automation using **Selenium (.NET)**.
                     </p>
@@ -128,33 +146,38 @@
                         <div class="icon-text justify-center md:justify-end">
                              <!-- Envelope Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <span>usmansaghri@gmail.com</span>
+                            <!-- MAILTO Link (Kept) -->
+                            <a href="mailto:usmansaghri@gmail.com" class="hover:text-white transition duration-200">usmansaghri@gmail.com</a>
                         </div>
                         <div class="icon-text justify-center md:justify-end">
                             <!-- Phone Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span>03362067001</span>
+                             <!-- TEL Link (Kept) -->
+                            <a href="tel:03362067001" class="hover:text-white transition duration-200">03362067001</a>
                         </div>
                     </div>
-                     <!-- Download Resume Button (The 'href' is updated to link the uploaded PDF file) -->
-                    <!-- FIX: Ensure the file path uses the correct name, which is SQAE-Automation.pdf -->
-                    <a href="./SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
-                        <!-- Download Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        Download PDF Resume
-                    </a>
+                     
+                    <!-- Action Buttons Container (Download only) -->
+                    <div class="mt-4 flex flex-col sm:flex-row justify-center md:justify-end">
+                        
+                        <!-- Existing Download Resume Button (Reverted Filename) -->
+                        <a href="./SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                            <!-- Download Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Download PDF Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills / Technical Stack Section (Now Scrollable/Slider-like) -->
-    <section id="skills" class="section-padding bg-slate-900 border-b border-slate-700">
+    <!-- Skills / Technical Stack Section (Scrollable/Slider-like) -->
+    <section id="skills" class="section-padding bg-slate-800 border-b border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <h2 class="text-3xl font-bold text-center mb-10 text-white">Technical Expertise & Tools</h2>
             
             <!-- Horizontal Scrollable Container for Slider Effect (Responsive) -->
-            <!-- Cards maintain fixed width (w-80) and flex-shrink-0 for consistent scrolling experience -->
             <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 scroll-container">
                 
                 <!-- Skill Category 1: Testing Fundamentals -->
@@ -193,12 +216,11 @@
         </div>
     </section>
     
-    <!-- Certifications Section (New) -->
-    <section id="certifications" class="section-padding bg-slate-800 border-b border-slate-700">
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-slate-900">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <h2 class="text-3xl font-bold text-center mb-10 text-white">Certifications & Training</h2>
             
-            <!-- Updated Grid: 1 column on extra small, 2 on small/medium, 4 on large screens -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                 
                 <!-- Cert 1: SQA Bootcamp (Contour Software) -->
@@ -248,137 +270,43 @@
         </div>
     </section>
 
-    <!-- Portfolio / Projects Section -->
-    <section id="projects" class="section-padding bg-slate-800 border-b border-slate-700">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-10 text-white">Work Experience & Key Contributions</h2>
-            
-            <div class="space-y-12">
-                
-                <!-- Project 1: Salsoft Technologies (Current Role) -->
-                <div class="card p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Salsoft Technologies - SQA Engineer (11/2023–PRESENT)</h3>
-                    <p class="text-indigo-400 mb-4">Focus: Digital Banking, Selenium Automation</p>
-                    <p class="text-slate-300 mb-4">
-                        Leading functional and regression testing efforts for secure, compliant, and high-performance digital banking and payment platforms.
-                    </p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
-                        <li>Designed and implemented automated test scripts for web applications using **Selenium (.NET)** to accelerate verification cycles.</li>
-                        <li>Ensured quality standards were met by working closely with cross-functional teams (developers, project managers) to understand complex requirements.</li>
-                        <li>Focus on high-security and compliance validation within the financial domain.</li>
-                    </ul>
-                    <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
-                         <!-- Code Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        View Project Details (Hypothetical)
-                    </a>
-                </div>
-
-                <!-- Project 2: Marcell Technologies (Previous Role) -->
-                <div class="card p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Marcell Technologies - SQA Engineer (04/2023–11/2023)</h3>
-                    <p class="text-indigo-400 mb-4">Focus: Manual Testing, Documentation & Feedback</p>
-                    <p class="text-slate-300 mb-4">
-                        Responsible for the quality gate process by providing timely and meaningful feedback on core application functionality.
-                    </p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
-                        <li>Conducted comprehensive **manual testing** to validate all application functionality against specifications.</li>
-                        <li>Reviewed requirements, specifications, and technical design documents to ensure clarity and testability.</li>
-                        <li>Actively participated in sprints, ensuring smooth execution and sign-off on delivered features.</li>
-                    </ul>
-                     <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
-                         <!-- Code Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        View Project Details (Hypothetical)
-                    </a>
-                </div>
-
-                <!-- Project 3: Birrah Technologies (Jr SQA Role) -->
-                 <div class="card p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Birrah Technologies - Jr SQA Engineer (02/2022–01/2023)</h3>
-                    <p class="text-indigo-400 mb-4">Focus: Foundational Testing & Learning</p>
-                    <p class="text-slate-300 mb-4">
-                        Gained foundational experience in the software quality assurance lifecycle and core testing techniques.
-                    </p>
-                    <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
-                         <!-- Code Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        View Project Details (Hypothetical)
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-slate-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-4 text-white">Let's Discuss Automation Strategy</h2>
-                <p class="text-lg text-slate-400 mb-8">
-                    I'm currently open to new challenges. Reach out for a consultation on scaling your QA efforts.
-                </p>
-                
-                <!-- 
-                    FORM SUBMISSION NOW USES FORMSPREE 
-                -->
-                <form id="contact-form" action="https://formspree.io/f/mrgwjvry" method="POST" class="space-y-4 text-left">
-                    <!-- This hidden field tells Formspree where to send the email (Using your displayed email) -->
-                    <input type="hidden" name="_replyto" value="usmansaghri@gmail.com">
-                    
-                    <input type="text" name="name" placeholder="Your Name" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
-                    <input type="email" name="email" placeholder="Work Email" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
-                    <textarea name="message" placeholder="Tell me about your project needs..." rows="4" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
-                    
-                    <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.01] shadow-md shadow-indigo-500/30">
-                        Send Inquiry
-                    </button>
-                    <!-- Formspree automatically handles success/error messages, so we hide the old JavaScript status div -->
-                    <div id="contact-status" class="pt-2 text-sm font-medium text-green-400 text-center hidden"></div>
-                </form>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-700/50 mt-0">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-            <div class="space-x-4 mb-3 text-slate-400 text-lg">
-                <a href="https://linkedin.com/in/usman-saghri-sqa" target="_blank" class="hover:text-indigo-400 transition duration-200">LinkedIn</a>
-                <span class="text-slate-600">|</span>
-                <a href="https://github.com/usman-saghri" target="_blank" class="hover:text-indigo-400 transition duration-200">GitHub</a>
-            </div>
-            <p class="text-slate-500 text-sm">&copy; 2025 Usman Saghri. All Rights Reserved.</p>
+    <footer class="bg-slate-950 py-6 border-t border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
+            <!-- Reverted: Usman Saghri | SQA Automation Portfolio. -->
+            <p class="text-slate-500 text-sm">
+                &copy; 2024 Usman Saghri | SQA Automation Portfolio.
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Navigation Toggle -->
+    <!-- JavaScript for Mobile Menu Handling -->
     <script>
-        // Navigation Toggle Logic (Existing)
-        const menuButton = document.getElementById('menu-button');
-        const navMenu = document.getElementById('navigation-menu');
-        const iconMenu = document.getElementById('icon-menu');
-        const iconClose = document.getElementById('icon-close');
-        
-        menuButton.addEventListener('click', () => {
+        // --- Mobile Menu Toggle ---
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('navigation-menu');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+            
             // Toggle visibility of the navigation menu
-            navMenu.classList.toggle('hidden');
-            // Toggle between the hamburger and close icons
+            menu.classList.toggle('hidden');
+            
+            // Toggle icons
             iconMenu.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
+            iconClose.classList.add('hidden'); // Ensure close icon is hidden by default
         });
-        
-        // Close menu when a link is clicked (important for mobile UX)
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Only hide if the menu is currently visible (i.e., less than md screen)
-                if (window.innerWidth < 768) { 
-                     navMenu.classList.add('hidden');
-                     iconMenu.classList.remove('hidden');
-                     iconClose.classList.add('hidden');
+
+        // Hide menu when a link is clicked (on mobile)
+        document.querySelectorAll('#navigation-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    const menu = document.getElementById('navigation-menu');
+                    const iconMenu = document.getElementById('icon-menu');
+                    const iconClose = document.getElementById('icon-close');
+                    
+                    menu.classList.add('hidden');
+                    iconMenu.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
                 }
             });
         });
