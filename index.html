@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title Reverted: Usman Saghri | SQA Automation Portfolio -->
     <title>Usman Saghri | SQA Automation Portfolio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles & Configuration */
+        /* Custom Styles & Configuration (Original Indigo Theme) */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0c121e; /* Deeper dark blue/slate */
+            background-color: #0c121e; /* Deeper dark blue/slate (Original) */
             color: #e2e8f0; /* Slate-200: Light text */
         }
         .section-padding {
@@ -23,6 +22,12 @@
                 padding: 6rem 0;
             }
         }
+        
+        /* Primary Accent Color: Indigo (#818cf8) */
+        .text-primary-accent {
+            color: #818cf8; /* Indigo-400 */
+        }
+        
         .icon-text {
             display: inline-flex;
             align-items: center;
@@ -34,8 +39,9 @@
         }
         .icon-text svg {
             margin-right: 0.5rem;
-            color: #818cf8; /* Indigo-400 */
+            color: #818cf8; /* Indigo-400 (Original Accent) */
         }
+        
         /* General Card Styling & HOVER EFFECT for all cards */
         .card {
             background-color: #1a2434; /* Slightly lighter card background */
@@ -76,7 +82,7 @@
         .cert-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-            border-color: #6366f1; /* Indigo-500 on hover */
+            border-color: #6366f1; /* Indigo-500 on hover (Original Accent) */
         }
         /* Specific styling for the API card to inherit hover but keep custom background */
         .card-10pearls.cert-card {
@@ -86,11 +92,11 @@
 </head>
 <body>
 
-    <!-- Header & Navigation (Call Now button added here) -->
+    <!-- Header & Navigation -->
     <header class="bg-slate-900 border-b border-indigo-500/30 sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo/Brand (Reverted: Usman Saghri | SQA) -->
+                <!-- Logo/Brand (Usman Saghri | SQA) -->
                 <a href="#" class="text-xl sm:text-2xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition duration-300">USMAN SAGHRI | SQA</a>
                 
                 <!-- Hamburger Button (Mobile Only) -->
@@ -109,16 +115,16 @@
                         <a href="#skills" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Skills & Tools</a>
                         <a href="#certifications" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Certifications</a>
                         
-                        <!-- Call Now Button for Mobile (Kept: Telto link) -->
-                        <a href="tel:03362067001" class="md:hidden inline-flex items-center justify-center px-6 py-2 bg-green-600 text-white text-base font-semibold rounded-lg hover:bg-green-700 transition duration-300 mt-3">
+                        <!-- Call Now Button for Mobile (INDIGO) -->
+                        <a href="tel:03362067001" class="md:hidden inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 mt-3">
                             <!-- Phone Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             Call Now
                         </a>
                     </nav>
                     
-                    <!-- Call Now Button for Desktop (Kept: Telto link) -->
-                    <a href="tel:03362067001" class="hidden md:inline-flex items-center px-4 py-1.5 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 transition duration-300">
+                    <!-- Call Now Button for Desktop (INDIGO) -->
+                    <a href="tel:03362067001" class="hidden md:inline-flex items-center px-4 py-1.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition duration-300">
                         <!-- Phone Icon (smaller for header) -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         Call Now
@@ -132,10 +138,10 @@
     <section id="hero" class="relative section-padding pt-24 pb-12 md:pt-40 md:pb-20 bg-slate-900 border-b border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
-                <!-- Left: Title and Summary (Reverted: Usman Saghri | SQA Engineer) -->
+                <!-- Left: Title and Summary (Usman Saghri | SQA Engineer) -->
                 <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
                     <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">Usman Saghri</h1>
-                    <h2 class="2xl sm:text-3xl font-semibold mb-4 text-indigo-400">SQA Automation Engineer</h2>
+                    <h2 class="2xl sm:text-3xl font-semibold mb-4 text-indigo-400">SQA Engineer</h2>
                     <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0">
                         Solution Oriented SQA Engineer with 3 years of experience, skilled in motivating teams, and passionate about software quality assurance and robust automation using **Selenium (.NET)**.
                     </p>
@@ -160,12 +166,12 @@
                     <!-- Action Buttons Container (Download only) -->
                     <div class="mt-4 flex flex-col sm:flex-row justify-center md:justify-end">
                         
-                        <!-- Existing Download Resume Button (Reverted Filename) -->
-                        <a href="./SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                        <!-- Download Button: Using JS function to force download behavior -->
+                        <button onclick="forceDownload()" class="inline-flex items-center justify-center px-6 py-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                             <!-- Download Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                             Download PDF Resume
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -243,7 +249,7 @@
                     <p class="text-sm text-slate-400">Agile Process Expertise</p>
                 </div>
                 
-                <!-- Cert 3: API Testing (10Pearls) - Custom Color -->
+                <!-- Cert 3: API Testing (10Pearls) - Custom Color (Original) -->
                 <div class="cert-card p-4 rounded-xl shadow-xl card-10pearls">
                     <div class="mb-2 w-10 h-10 mx-auto text-10pearls-accent">
                         <!-- Database/Server Icon -->
@@ -273,14 +279,13 @@
     <!-- Footer -->
     <footer class="bg-slate-950 py-6 border-t border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
-            <!-- Reverted: Usman Saghri | SQA Automation Portfolio. -->
             <p class="text-slate-500 text-sm">
                 &copy; 2024 Usman Saghri | SQA Automation Portfolio.
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Handling -->
+    <!-- JavaScript for Mobile Menu Handling & Download Fix -->
     <script>
         // --- Mobile Menu Toggle ---
         document.getElementById('menu-button').addEventListener('click', function() {
@@ -310,6 +315,25 @@
                 }
             });
         });
+
+        // --- PDF Download Fix (Force Download) ---
+        function forceDownload() {
+            // Path to the file (assuming it's in the same directory/asset space)
+            const url = './SQAE-Automation.pdf'; 
+            // The desired filename for the downloaded file
+            const filename = 'Usman_Saghri_SQA_Resume.pdf'; 
+            
+            // 1. Create a temporary anchor element
+            const tempLink = document.createElement('a');
+            tempLink.style.display = 'none';
+            tempLink.href = url;
+            tempLink.download = filename; // This attribute forces the download behavior
+            
+            // 2. Append to body, simulate click, and remove it
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+        }
     </script>
 </body>
 </html>
