@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen | SQA Automation Portfolio</title>
+    <title>Usman Saghri | SQA Automation Portfolio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -32,6 +32,7 @@
             margin-right: 0.5rem;
             color: #818cf8; /* Indigo-400 */
         }
+        /* General Card Styling & HOVER EFFECT for all cards */
         .card {
             background-color: #1a2434; /* Slightly lighter card background */
             border: 1px solid #334155; /* Slate-700 border */
@@ -41,21 +42,72 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
         }
+        
+        /* Custom CSS for the Scrollable Slider Effect in Skills Section */
+        /* Note: Cards in this section must maintain a fixed width for the slider to work */
+        .scroll-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+        }
+
+        /* 10Pearls Custom Styles - Color: #262B57 */
+        .card-10pearls {
+            background-color: #262B57; /* Custom Indigo/Blue shade */
+            /* Keeping the 10Pearls brand border for uniqueness */
+            border: 1px solid #A22B47; 
+        }
+        .card-10pearls .text-10pearls-accent {
+            color: #a5b4fc; /* Indigo-300 for uniformity */
+        }
+        
+        /* Certification Card Styles for Consistent Hover */
+        .cert-card {
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            background-color: #1a2434; /* Default dark background */
+            border: 1px solid #334155;
+        }
+        /* Adding a light border highlight on hover for all cert cards */
+        .cert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+            border-color: #6366f1; /* Indigo-500 on hover */
+        }
+        /* Specific styling for the API card to inherit hover but keep custom background */
+        .card-10pearls.cert-card {
+             background-color: #262B57; /* Override default background */
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation (UPDATED FOR MOBILE RESPONSIVENESS) -->
     <header class="bg-slate-900 border-b border-indigo-500/30 sticky top-0 z-50 shadow-lg">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition duration-300">ALEX CHEN | SQA</a>
-            <div class="space-x-4 flex text-sm sm:text-base">
-                <a href="#about" class="text-slate-300 hover:text-white transition duration-200">About</a>
-                <a href="#skills" class="text-slate-300 hover:text-white transition duration-200">Skills</a>
-                <a href="#projects" class="text-slate-300 hover:text-white transition duration-200">Portfolio</a>
-                <a href="#contact" class="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition duration-300">Contact</a>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
+                <a href="#" class="text-xl sm:text-2xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition duration-300">USMAN SAGHRI | SQA</a>
+                
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="menu-button" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200">
+                    <!-- Menu Icon (default) -->
+                    <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <!-- Close Icon (hidden by default) -->
+                    <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+
+                <!-- Navigation Links (Collapsible on Mobile, Visible on MD+) -->
+                <div id="navigation-menu" class="hidden md:flex md:space-x-4 space-x-0 md:space-y-0 space-y-3 flex-col md:flex-row text-sm sm:text-base absolute md:relative top-full left-0 w-full md:w-auto bg-slate-900 md:bg-transparent p-4 md:p-0 shadow-xl md:shadow-none border-t border-indigo-500/30 md:border-t-0">
+                    <a href="#about" class="text-slate-300 hover:text-white transition duration-200 block md:inline">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Skills & Tools</a>
+                    <a href="#certifications" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Certifications</a>
+                    <a href="#projects" class="text-slate-300 hover:text-white transition duration-200 block md:inline">Portfolio</a>
+                    <a href="#contact" class="md:px-3 md:py-1 py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition duration-300 block text-center">Contact</a>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero / Resume Header Section -->
@@ -64,10 +116,10 @@
             <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
                 <!-- Left: Title and Summary -->
                 <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
-                    <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">Alex Chen</h1>
-                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-400">Senior SQA Automation Engineer</h2>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">Usman Saghri</h1>
+                    <h2 class="2xl sm:text-3xl font-semibold mb-4 text-indigo-400">SQA Engineer</h2>
                     <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0">
-                        7+ years of expertise in building scalable **CI/CD-integrated test automation frameworks** using Python and Playwright. Dedicated to maximizing product quality and accelerating release cycles.
+                        Solution Oriented SQA Engineer with 3 years of experience, skilled in motivating teams, and passionate about software quality assurance and robust automation using **Selenium (.NET)**.
                     </p>
                 </div>
                 <!-- Right: Contact and Download -->
@@ -76,16 +128,16 @@
                         <div class="icon-text justify-center md:justify-end">
                              <!-- Envelope Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <span>alex.chen@email.com</span>
+                            <span>usmansaghri@gmail.com</span>
                         </div>
                         <div class="icon-text justify-center md:justify-end">
                             <!-- Phone Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span>(555) 123-4567</span>
+                            <span>03362067001</span>
                         </div>
                     </div>
-                     <!-- Download Resume Button (Link to the generated LaTeX PDF once compiled) -->
-                    <a href="sqa_automation_resume.pdf" download="Alex_Chen_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                     <!-- Download Resume Button (The 'href' is updated to link the uploaded PDF file) -->
+                    <a href="SQAE-Automation.pdf" download="Usman_Saghri_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
                         <!-- Download Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Download PDF Resume
@@ -95,44 +147,101 @@
         </div>
     </section>
 
-    <!-- Skills / Technical Stack Section -->
+    <!-- Skills / Technical Stack Section (Now Scrollable/Slider-like) -->
     <section id="skills" class="section-padding bg-slate-900 border-b border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-10 text-white">Technical Expertise</h2>
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Technical Expertise & Tools</h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Horizontal Scrollable Container for Slider Effect (Responsive) -->
+            <!-- Cards maintain fixed width (w-80) and flex-shrink-0 for consistent scrolling experience -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 scroll-container">
                 
-                <!-- Skill Category 1: UI Automation -->
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">UI / E2E Automation</h3>
+                <!-- Skill Category 1: Testing Fundamentals -->
+                <div class="card p-6 rounded-xl flex-shrink-0 w-80 snap-center">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">Testing Methodologies</h3>
                     <ul class="space-y-2 text-slate-400">
-                        <li>**Playwright** (Advanced)</li>
-                        <li>Cypress, Selenium WebDriver</li>
-                        <li>Cross-browser compatibility</li>
-                        <li>Visual Regression Testing</li>
+                        <li>**Functional Testing** & UAT</li>
+                        <li>Regression, Smoke & Sanity Testing</li>
+                        <li>Integration & Cross-browser Testing</li>
+                        <li>API Testing (Certified)</li>
                     </ul>
                 </div>
                 
-                <!-- Skill Category 2: Backend & API -->
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">Backend & API Testing</h3>
+                <!-- Skill Category 2: Automation & Tools -->
+                <div class="card p-6 rounded-xl flex-shrink-0 w-80 snap-center">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">Automation & Tools</h3>
                     <ul class="space-y-2 text-slate-400">
-                        <li>REST Assured / Requests</li>
-                        <li>Contract Testing (Pact)</li>
-                        <li>Performance Testing (JMeter)</li>
-                        <li>Microservices validation</li>
+                        <li>**Selenium (.NET)** for Web Automation</li>
+                        <li>**Jira, Trello, Asana** (Project Management)</li>
+                        <li>Postman / API Tools</li>
+                        <li>Application Security Testing (In Progress)</li>
                     </ul>
                 </div>
                 
-                <!-- Skill Category 3: DevOps & CI/CD -->
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">DevOps & CI/CD</h3>
+                <!-- Skill Category 3: CI/CD & Process -->
+                <div class="card p-6 rounded-xl flex-shrink-0 w-80 snap-center">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">CI/CD & Process</h3>
                     <ul class="space-y-2 text-slate-400">
-                        <li>**Jenkins** Pipelines (Groovy)</li>
-                        <li>Docker & Kubernetes</li>
-                        <li>GitHub Actions / GitLab CI</li>
-                        <li>Allure/HTML Reporting</li>
+                        <li>Agile/Scrum (SFPC Certified)</li>
+                        <li>CI/CD Workflow Understanding</li>
+                        <li>Requirements Review & Feedback</li>
+                        <li>Cross-functional Team Collaboration</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section (New) -->
+    <section id="certifications" class="section-padding bg-slate-800 border-b border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Certifications & Training</h2>
+            
+            <!-- Updated Grid: 1 column on extra small, 2 on small/medium, 4 on large screens -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                
+                <!-- Cert 1: SQA Bootcamp (Contour Software) -->
+                <div class="cert-card p-4 rounded-xl bg-indigo-900/40 border-indigo-500/50">
+                    <div class="mb-2 w-10 h-10 mx-auto text-indigo-400">
+                        <!-- Code/Terminal Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">SQA Bootcamp Training</h4>
+                    <p class="text-sm text-slate-400">Contour Software</p>
+                </div>
+                
+                <!-- Cert 2: Scrum Foundation (SFPC) -->
+                <div class="cert-card p-4 rounded-xl bg-indigo-900/40 border-indigo-500/50">
+                    <div class="mb-2 w-10 h-10 mx-auto text-indigo-400">
+                        <!-- Check List Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h.01"/><path d="M14 14h.01"/><path d="M14 18h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/><path d="M8 18h.01"/><rect x="2" y="3" width="20" height="18" rx="2" ry="2"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">Scrum Foundation (SFPC)</h4>
+                    <p class="text-sm text-slate-400">Agile Process Expertise</p>
+                </div>
+                
+                <!-- Cert 3: API Testing (10Pearls) - Custom Color -->
+                <div class="cert-card p-4 rounded-xl shadow-xl card-10pearls">
+                    <div class="mb-2 w-10 h-10 mx-auto text-10pearls-accent">
+                        <!-- Database/Server Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">API Testing</h4>
+                    <p class="text-sm text-slate-200">10Pearls</p>
+                </div>
+                
+                 <!-- Cert 4: Application Security Testing (In Progress) -->
+                <div class="cert-card p-4 rounded-xl bg-indigo-900/40 border-indigo-500/50">
+                    <div class="mb-2 w-10 h-10 mx-auto text-indigo-400">
+                        <!-- Shield icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7c0 4.7 4 7.5 8 9.5 4-2 8-4.8 8-9.5z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">App Security Testing</h4>
+                    <p class="text-sm text-slate-400">(In Progress)</p>
                 </div>
             </div>
         </div>
@@ -141,45 +250,59 @@
     <!-- Portfolio / Projects Section -->
     <section id="projects" class="section-padding bg-slate-800 border-b border-slate-700">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-10 text-white">Featured Automation Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Work Experience & Key Contributions</h2>
             
             <div class="space-y-12">
                 
-                <!-- Project 1: E-commerce Platform -->
+                <!-- Project 1: Salsoft Technologies (Current Role) -->
                 <div class="card p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2 text-white">E-commerce Checkout Validation Suite</h3>
-                    <p class="text-indigo-400 mb-4">Python, Pytest, Playwright, Jenkins</p>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Salsoft Technologies - SQA Engineer (11/2023–PRESENT)</h3>
+                    <p class="text-indigo-400 mb-4">Focus: Digital Banking, Selenium Automation</p>
                     <p class="text-slate-300 mb-4">
-                        Developed a comprehensive, scalable test suite for a multi-region e-commerce platform. Implemented a custom **Page Object Model (POM)** structure to handle dynamic web elements and complex payment flows.
+                        Leading functional and regression testing efforts for secure, compliant, and high-performance digital banking and payment platforms.
                     </p>
                     <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
-                        <li>Achieved **95\% UI test coverage** of all critical user journeys (CUJs).</li>
-                        <li>Integrated with Jenkins for hourly execution in a headless Docker environment.</li>
-                        <li>Reduced regression testing cycle time from 8 hours to 45 minutes.</li>
+                        <li>Designed and implemented automated test scripts for web applications using **Selenium (.NET)** to accelerate verification cycles.</li>
+                        <li>Ensured quality standards were met by working closely with cross-functional teams (developers, project managers) to understand complex requirements.</li>
+                        <li>Focus on high-security and compliance validation within the financial domain.</li>
                     </ul>
-                    <a href="https://github.com/alexchen-automation/ecommerce-qa" target="_blank" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
+                    <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
                          <!-- Code Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        View Code on GitHub
+                        View Project Details (Hypothetical)
                     </a>
                 </div>
 
-                <!-- Project 2: Microservice API Contract Validation -->
+                <!-- Project 2: Marcell Technologies (Previous Role) -->
                 <div class="card p-8 rounded-xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Microservice API Contract Validation</h3>
-                    <p class="text-indigo-400 mb-4">Java, REST Assured, TestNG, AWS CodePipeline</p>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Marcell Technologies - SQA Engineer (04/2023–11/2023)</h3>
+                    <p class="text-indigo-400 mb-4">Focus: Manual Testing, Documentation & Feedback</p>
                     <p class="text-slate-300 mb-4">
-                        Created an independent, fast-executing test framework to ensure backward compatibility and data integrity across 12 finance-related microservices. Focused on isolating and validating JSON contract schemas.
+                        Responsible for the quality gate process by providing timely and meaningful feedback on core application functionality.
                     </p>
                     <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
-                        <li>Implemented over **400 API test cases** with minimal data dependency.</li>
-                        <li>Successfully prevented 3 major breaking changes from reaching staging environments.</li>
-                        <li>Designed the testing suite to run in parallel on cloud-based execution platforms.</li>
+                        <li>Conducted comprehensive **manual testing** to validate all application functionality against specifications.</li>
+                        <li>Reviewed requirements, specifications, and technical design documents to ensure clarity and testability.</li>
+                        <li>Actively participated in sprints, ensuring smooth execution and sign-off on delivered features.</li>
                     </ul>
-                    <a href="https://github.com/alexchen-automation/microservice-api-qa" target="_blank" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
+                     <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
                          <!-- Code Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        View Code on GitHub
+                        View Project Details (Hypothetical)
+                    </a>
+                </div>
+
+                <!-- Project 3: Birrah Technologies (Jr SQA Role) -->
+                 <div class="card p-8 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Birrah Technologies - Jr SQA Engineer (02/2022–01/2023)</h3>
+                    <p class="text-indigo-400 mb-4">Focus: Foundational Testing & Learning</p>
+                    <p class="text-slate-300 mb-4">
+                        Gained foundational experience in the software quality assurance lifecycle and core testing techniques.
+                    </p>
+                    <a href="#" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
+                         <!-- Code Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        View Project Details (Hypothetical)
                     </a>
                 </div>
                 
@@ -196,14 +319,25 @@
                     I'm currently open to new challenges. Reach out for a consultation on scaling your QA efforts.
                 </p>
                 
-                <form id="contact-form" class="space-y-4 text-left">
-                    <input type="text" placeholder="Your Name" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
-                    <input type="email" placeholder="Work Email" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
-                    <textarea placeholder="Tell me about your project needs..." rows="4" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                <!-- 
+                    *** CHANGES HERE: FORM SUBMISSION NOW USES FORMSPREE ***
+                    1. 'action' is set to a generic Formspree endpoint (https://formspree.io/f/mrgwjvry). 
+                    2. 'method' is set to POST.
+                    3. A hidden input field is added with your email (usmansaghri@gmail.com) so Formspree knows where to send the email.
+                -->
+                <form id="contact-form" action="https://formspree.io/f/mrgwjvry" method="POST" class="space-y-4 text-left">
+                    <!-- This hidden field tells Formspree where to send the email (Using your displayed email) -->
+                    <input type="hidden" name="_replyto" value="usmansaghri@gmail.com">
+                    
+                    <input type="text" name="name" placeholder="Your Name" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
+                    <input type="email" name="email" placeholder="Work Email" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
+                    <textarea name="message" placeholder="Tell me about your project needs..." rows="4" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                    
                     <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.01] shadow-md shadow-indigo-500/30">
                         Send Inquiry
                     </button>
-                    <div id="contact-status" class="pt-2 text-sm font-medium text-green-400 text-center hidden">Message sent successfully! I'll respond promptly.</div>
+                    <!-- Formspree automatically handles success/error messages, so we hide the old JavaScript status div -->
+                    <div id="contact-status" class="pt-2 text-sm font-medium text-green-400 text-center hidden"></div>
                 </form>
 
             </div>
@@ -214,36 +348,45 @@
     <footer class="bg-slate-900 border-t border-slate-700/50 mt-0">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
             <div class="space-x-4 mb-3 text-slate-400 text-lg">
-                <a href="https://linkedin.com/in/alexchen-sqa" target="_blank" class="hover:text-indigo-400 transition duration-200">LinkedIn</a>
+                <a href="https://linkedin.com/in/usman-saghri-sqa" target="_blank" class="hover:text-indigo-400 transition duration-200">LinkedIn</a>
                 <span class="text-slate-600">|</span>
-                <a href="https://github.com/alexchen-automation" target="_blank" class="hover:text-indigo-400 transition duration-200">GitHub</a>
+                <a href="https://github.com/usman-saghri" target="_blank" class="hover:text-indigo-400 transition duration-200">GitHub</a>
             </div>
-            <p class="text-slate-500 text-sm">&copy; 2025 Alex Chen. All Rights Reserved.</p>
+            <p class="text-slate-500 text-sm">&copy; 2025 Usman Saghri. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Form Submission Simulation -->
+    <!-- JavaScript for Navigation Toggle -->
     <script>
-        const form = document.getElementById('contact-form');
-        const statusMessage = document.getElementById('contact-status');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simulate successful API call
-            setTimeout(() => {
-                form.reset(); 
-                statusMessage.classList.remove('hidden'); 
-                
-                // Hide the success message after 5 seconds
-                setTimeout(() => {
-                    statusMessage.classList.add('hidden');
-                }, 5000); 
-
-                console.log('Contact form submission simulated.');
-            }, 750);
+        // *** OLD FORM SUBMISSION LOGIC REMOVED ***
+        // Formspree ab form submission ko handle karega.
+        
+        // Navigation Toggle Logic (Existing)
+        const menuButton = document.getElementById('menu-button');
+        const navMenu = document.getElementById('navigation-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+        
+        menuButton.addEventListener('click', () => {
+            // Toggle visibility of the navigation menu
+            navMenu.classList.toggle('hidden');
+            // Toggle between the hamburger and close icons
+            iconMenu.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked (important for mobile UX)
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Only hide if the menu is currently visible (i.e., less than md screen)
+                if (window.innerWidth < 768) { 
+                     navMenu.classList.add('hidden');
+                     iconMenu.classList.remove('hidden');
+                     iconClose.classList.add('hidden');
+                }
+            });
         });
     </script>
-
 </body>
 </html>
