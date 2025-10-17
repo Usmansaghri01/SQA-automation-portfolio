@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | SQA Automation Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles & Configuration */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c121e; /* Deeper dark blue/slate */
+            color: #e2e8f0; /* Slate-200: Light text */
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 0;
+            }
+        }
+        .icon-text {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 1.5rem;
+            color: #94a3b8; /* Slate-400 */
+        }
+        .icon-text svg {
+            margin-right: 0.5rem;
+            color: #818cf8; /* Indigo-400 */
+        }
+        .card {
+            background-color: #1a2434; /* Slightly lighter card background */
+            border: 1px solid #334155; /* Slate-700 border */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-slate-900 border-b border-indigo-500/30 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition duration-300">ALEX CHEN | SQA</a>
+            <div class="space-x-4 flex text-sm sm:text-base">
+                <a href="#about" class="text-slate-300 hover:text-white transition duration-200">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-white transition duration-200">Skills</a>
+                <a href="#projects" class="text-slate-300 hover:text-white transition duration-200">Portfolio</a>
+                <a href="#contact" class="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero / Resume Header Section -->
+    <section id="hero" class="relative section-padding pt-24 pb-12 md:pt-40 md:pb-20 bg-slate-900 border-b border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
+                <!-- Left: Title and Summary -->
+                <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">Alex Chen</h1>
+                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-indigo-400">Senior SQA Automation Engineer</h2>
+                    <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0">
+                        7+ years of expertise in building scalable **CI/CD-integrated test automation frameworks** using Python and Playwright. Dedicated to maximizing product quality and accelerating release cycles.
+                    </p>
+                </div>
+                <!-- Right: Contact and Download -->
+                <div class="md:w-2/5 text-center md:text-right">
+                    <div class="mb-4">
+                        <div class="icon-text justify-center md:justify-end">
+                             <!-- Envelope Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>alex.chen@email.com</span>
+                        </div>
+                        <div class="icon-text justify-center md:justify-end">
+                            <!-- Phone Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-4.71-4.71 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>(555) 123-4567</span>
+                        </div>
+                    </div>
+                     <!-- Download Resume Button (Link to the generated LaTeX PDF once compiled) -->
+                    <a href="sqa_automation_resume.pdf" download="Alex_Chen_SQA_Resume.pdf" class="inline-flex items-center px-6 py-2 mt-2 bg-indigo-600 text-white text-base font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                        <!-- Download Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download PDF Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills / Technical Stack Section -->
+    <section id="skills" class="section-padding bg-slate-900 border-b border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Technical Expertise</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Skill Category 1: UI Automation -->
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">UI / E2E Automation</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>**Playwright** (Advanced)</li>
+                        <li>Cypress, Selenium WebDriver</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>Visual Regression Testing</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2: Backend & API -->
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">Backend & API Testing</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>REST Assured / Requests</li>
+                        <li>Contract Testing (Pact)</li>
+                        <li>Performance Testing (JMeter)</li>
+                        <li>Microservices validation</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 3: DevOps & CI/CD -->
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-400">DevOps & CI/CD</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>**Jenkins** Pipelines (Groovy)</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>GitHub Actions / GitLab CI</li>
+                        <li>Allure/HTML Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Projects Section -->
+    <section id="projects" class="section-padding bg-slate-800 border-b border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Featured Automation Projects</h2>
+            
+            <div class="space-y-12">
+                
+                <!-- Project 1: E-commerce Platform -->
+                <div class="card p-8 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-2 text-white">E-commerce Checkout Validation Suite</h3>
+                    <p class="text-indigo-400 mb-4">Python, Pytest, Playwright, Jenkins</p>
+                    <p class="text-slate-300 mb-4">
+                        Developed a comprehensive, scalable test suite for a multi-region e-commerce platform. Implemented a custom **Page Object Model (POM)** structure to handle dynamic web elements and complex payment flows.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
+                        <li>Achieved **95\% UI test coverage** of all critical user journeys (CUJs).</li>
+                        <li>Integrated with Jenkins for hourly execution in a headless Docker environment.</li>
+                        <li>Reduced regression testing cycle time from 8 hours to 45 minutes.</li>
+                    </ul>
+                    <a href="https://github.com/alexchen-automation/ecommerce-qa" target="_blank" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
+                         <!-- Code Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        View Code on GitHub
+                    </a>
+                </div>
+
+                <!-- Project 2: Microservice API Contract Validation -->
+                <div class="card p-8 rounded-xl shadow-xl">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Microservice API Contract Validation</h3>
+                    <p class="text-indigo-400 mb-4">Java, REST Assured, TestNG, AWS CodePipeline</p>
+                    <p class="text-slate-300 mb-4">
+                        Created an independent, fast-executing test framework to ensure backward compatibility and data integrity across 12 finance-related microservices. Focused on isolating and validating JSON contract schemas.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-400 ml-4">
+                        <li>Implemented over **400 API test cases** with minimal data dependency.</li>
+                        <li>Successfully prevented 3 major breaking changes from reaching staging environments.</li>
+                        <li>Designed the testing suite to run in parallel on cloud-based execution platforms.</li>
+                    </ul>
+                    <a href="https://github.com/alexchen-automation/microservice-api-qa" target="_blank" class="mt-4 inline-flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition duration-200">
+                         <!-- Code Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        View Code on GitHub
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-slate-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4 text-white">Let's Discuss Automation Strategy</h2>
+                <p class="text-lg text-slate-400 mb-8">
+                    I'm currently open to new challenges. Reach out for a consultation on scaling your QA efforts.
+                </p>
+                
+                <form id="contact-form" class="space-y-4 text-left">
+                    <input type="text" placeholder="Your Name" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
+                    <input type="email" placeholder="Work Email" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required>
+                    <textarea placeholder="Tell me about your project needs..." rows="4" class="w-full px-5 py-3 bg-slate-800 border border-slate-700 rounded-lg placeholder-slate-400 text-white focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                    <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.01] shadow-md shadow-indigo-500/30">
+                        Send Inquiry
+                    </button>
+                    <div id="contact-status" class="pt-2 text-sm font-medium text-green-400 text-center hidden">Message sent successfully! I'll respond promptly.</div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700/50 mt-0">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <div class="space-x-4 mb-3 text-slate-400 text-lg">
+                <a href="https://linkedin.com/in/alexchen-sqa" target="_blank" class="hover:text-indigo-400 transition duration-200">LinkedIn</a>
+                <span class="text-slate-600">|</span>
+                <a href="https://github.com/alexchen-automation" target="_blank" class="hover:text-indigo-400 transition duration-200">GitHub</a>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2025 Alex Chen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Submission Simulation -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const statusMessage = document.getElementById('contact-status');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate successful API call
+            setTimeout(() => {
+                form.reset(); 
+                statusMessage.classList.remove('hidden'); 
+                
+                // Hide the success message after 5 seconds
+                setTimeout(() => {
+                    statusMessage.classList.add('hidden');
+                }, 5000); 
+
+                console.log('Contact form submission simulated.');
+            }, 750);
+        });
+    </script>
+
+</body>
+</html>
